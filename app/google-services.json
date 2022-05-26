@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "690311873747",
+    "project_id": "cnn-news-a6b2a",
+    "storage_bucket": "cnn-news-a6b2a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:690311873747:android:5d1046144b3a4ce54d4026",
+        "android_client_info": {
+          "package_name": "com.latihan.cnn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "690311873747-h475rcph6d19255mjbmbvkoticbuvne1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.latihan.cnn",
+            "certificate_hash": "2d34fe8dbb0e11cb9b2cd1e22b84efba1a824ca6"
+          }
+        },
+        {
+          "client_id": "690311873747-lrnd0v1m80783lhokj7as36eeufalin3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAeLK3W0TQtU5ArVHuwoF40v7I_XTXdaNU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "690311873747-lrnd0v1m80783lhokj7as36eeufalin3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
