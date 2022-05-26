@@ -79,5 +79,7 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics-ktx'
     // Apply the Crashlytics Gradle plugin
     apply plugin: 'com.google.firebase.crashlytics'
+    //rounded image
+    implementation 'com.makeramen:roundedimageview:2.3.0'
 
 }

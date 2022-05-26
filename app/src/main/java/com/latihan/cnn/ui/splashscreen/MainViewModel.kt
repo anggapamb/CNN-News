@@ -7,7 +7,7 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MainViewModel @Inject constructor(
-    val apiService: ApiService
+    apiService: ApiService
 ) : BaseViewModel(apiService) {
 
 }

@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">CNN</string>
+    <string name="cnn_indonesia_berita_terbaru_terkini_indonesia_dunia">CNN Indonesia | Berita Terbaru, Terkini Indonesia, Dunia</string>
+    <string name="terbaru">Terbaru</string>
+    <string name="politik">Politik</string>
+    <string name="hukum">Hukum</string>
+    <string name="ekonomi">Ekonomi</string>
+    <string name="nasional">Nasional</string>
+    <string name="internasional">Internasional</string>
+    <string name="olahraga">Olahraga</string>
+    <string name="teknologi">Teknologi</string>
+    <string name="hiburan">Hiburan</string>
+    <string name="gaya_hidup">Gaya Hidup</string>
 </resources>

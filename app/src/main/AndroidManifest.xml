@@ -11,6 +11,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.CNN">
         <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".ui.splashscreen.MainActivity"
             android:exported="true">
             <intent-filter>
