@@ -68,7 +68,7 @@ class DataModule {
     @Provides
     fun provideApiService(okHttpClient: OkHttpClient): ApiService {
         return Retrofit.Builder()
-            .baseUrl("https://neptune74.crocodic.net/myfriend-kelasindustri/public/api/")
+            .baseUrl("https://api-berita-indonesia.vercel.app/cnn/")
             .addConverterFactory(ScalarsConverterFactory.create())
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)

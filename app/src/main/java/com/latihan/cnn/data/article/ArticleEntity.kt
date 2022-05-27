@@ -9,7 +9,6 @@ import kotlinx.android.parcel.Parcelize
 
 @Parcelize
 @Entity
-// TODO: ini masih salah lohh 
 data class ArticleEntity(
     @PrimaryKey
     @Expose
@@ -19,9 +18,18 @@ data class ArticleEntity(
     @SerializedName("id")
     val id: Int?,
     @Expose
-    @SerializedName("name")
-    val name: String?,
+    @SerializedName("link")
+    val link: String?,
     @Expose
-    @SerializedName("bio")
-    val bio: String?
+    @SerializedName("title")
+    val title: String?,
+    @Expose
+    @SerializedName("pubDate")
+    val pubDate: String?,
+    @Expose
+    @SerializedName("description")
+    val description: String?,
+    @Expose
+    @SerializedName("thumbnail")
+    val thumbnail: String?
 ): Parcelable

@@ -81,5 +81,8 @@ dependencies {
     apply plugin: 'com.google.firebase.crashlytics'
     //rounded image
     implementation 'com.makeramen:roundedimageview:2.3.0'
+    //lottie animation
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
 
 }
