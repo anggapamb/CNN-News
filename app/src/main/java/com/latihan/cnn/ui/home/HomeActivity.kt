@@ -6,12 +6,14 @@ import android.os.Looper
 import android.util.Log
 import android.view.View
 import com.crocodic.core.base.adapter.CoreListAdapter
+import com.crocodic.core.extension.openActivity
 import com.crocodic.core.extension.tos
 import com.latihan.cnn.R
 import com.latihan.cnn.base.activity.BaseActivity
 import com.latihan.cnn.data.article.ArticleEntity
 import com.latihan.cnn.databinding.ActivityHomeBinding
 import com.latihan.cnn.databinding.ArticleItemBinding
+import com.latihan.cnn.ui.webview.WebViewActivity
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -49,7 +51,11 @@ class HomeActivity : BaseActivity<ActivityHomeBinding, HomeViewModel>() {
 
     private fun initView() {
         binding.rvArticle.adapter =
-            CoreListAdapter<ArticleItemBinding, ArticleEntity>(R.layout.article_item).initItem(articleData)
+            CoreListAdapter<ArticleItemBinding, ArticleEntity>(R.layout.article_item).initItem(articleData) { position, data ->  
+                openActivity<WebViewActivity> {
+                    putExtra("dataWEB", data?.link)
+                }
+            }
     }
 
     private fun observe() {
