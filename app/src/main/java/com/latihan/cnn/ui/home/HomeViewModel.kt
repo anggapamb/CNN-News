@@ -56,4 +56,207 @@ class HomeViewModel @Inject constructor(
             })
     }
 
+    fun listNasional() = viewModelScope.launch(Dispatchers.IO) {
+        apiResponse.postValue(ApiResponse().responseLoading())
+        apiService.getNasional()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
+            .subscribeWith(object : ApiObserver(true) {
+                override fun onSuccess(t: String) {
+                    val responseJson = JSONObject(t)
+
+                    val apiStatus = responseJson.getBoolean("success")
+                    val apiMessage = responseJson.getString(ApiCode.MESSAGE)
+                    android.util.Log.d("MainActivity", "FriendData : $t")
+
+                    if (apiStatus) {
+                        val user = responseJson.getJSONObject(ApiCode.DATA).getJSONArray("posts").toList<ArticleEntity>(gson)
+                        dataArticle.postValue(user)
+                        apiResponse.postValue(ApiResponse().responseSuccess(apiMessage))
+                    } else {
+                        apiResponse.postValue(ApiResponse().responseWrong(apiMessage))
+                    }
+
+                }
+
+                override fun onError(e: Throwable) {
+                    apiResponse.postValue(ApiResponse().responseError(e))
+                }
+            })
+    }
+
+    fun listInternasional() = viewModelScope.launch(Dispatchers.IO) {
+        apiResponse.postValue(ApiResponse().responseLoading())
+        apiService.getInternasional()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
+            .subscribeWith(object : ApiObserver(true) {
+                override fun onSuccess(t: String) {
+                    val responseJson = JSONObject(t)
+
+                    val apiStatus = responseJson.getBoolean("success")
+                    val apiMessage = responseJson.getString(ApiCode.MESSAGE)
+                    android.util.Log.d("MainActivity", "FriendData : $t")
+
+                    if (apiStatus) {
+                        val user = responseJson.getJSONObject(ApiCode.DATA).getJSONArray("posts").toList<ArticleEntity>(gson)
+                        dataArticle.postValue(user)
+                        apiResponse.postValue(ApiResponse().responseSuccess(apiMessage))
+                    } else {
+                        apiResponse.postValue(ApiResponse().responseWrong(apiMessage))
+                    }
+
+                }
+
+                override fun onError(e: Throwable) {
+                    apiResponse.postValue(ApiResponse().responseError(e))
+                }
+            })
+    }
+
+    fun listEkonomi() = viewModelScope.launch(Dispatchers.IO) {
+        apiResponse.postValue(ApiResponse().responseLoading())
+        apiService.getEkonomi()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
+            .subscribeWith(object : ApiObserver(true) {
+                override fun onSuccess(t: String) {
+                    val responseJson = JSONObject(t)
+
+                    val apiStatus = responseJson.getBoolean("success")
+                    val apiMessage = responseJson.getString(ApiCode.MESSAGE)
+                    android.util.Log.d("MainActivity", "FriendData : $t")
+
+                    if (apiStatus) {
+                        val user = responseJson.getJSONObject(ApiCode.DATA).getJSONArray("posts").toList<ArticleEntity>(gson)
+                        dataArticle.postValue(user)
+                        apiResponse.postValue(ApiResponse().responseSuccess(apiMessage))
+                    } else {
+                        apiResponse.postValue(ApiResponse().responseWrong(apiMessage))
+                    }
+
+                }
+
+                override fun onError(e: Throwable) {
+                    apiResponse.postValue(ApiResponse().responseError(e))
+                }
+            })
+    }
+
+    fun listOlahraga() = viewModelScope.launch(Dispatchers.IO) {
+        apiResponse.postValue(ApiResponse().responseLoading())
+        apiService.getOlahraga()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
+            .subscribeWith(object : ApiObserver(true) {
+                override fun onSuccess(t: String) {
+                    val responseJson = JSONObject(t)
+
+                    val apiStatus = responseJson.getBoolean("success")
+                    val apiMessage = responseJson.getString(ApiCode.MESSAGE)
+                    android.util.Log.d("MainActivity", "FriendData : $t")
+
+                    if (apiStatus) {
+                        val user = responseJson.getJSONObject(ApiCode.DATA).getJSONArray("posts").toList<ArticleEntity>(gson)
+                        dataArticle.postValue(user)
+                        apiResponse.postValue(ApiResponse().responseSuccess(apiMessage))
+                    } else {
+                        apiResponse.postValue(ApiResponse().responseWrong(apiMessage))
+                    }
+
+                }
+
+                override fun onError(e: Throwable) {
+                    apiResponse.postValue(ApiResponse().responseError(e))
+                }
+            })
+    }
+
+    fun listTeknologi() = viewModelScope.launch(Dispatchers.IO) {
+        apiResponse.postValue(ApiResponse().responseLoading())
+        apiService.getTeknologi()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
+            .subscribeWith(object : ApiObserver(true) {
+                override fun onSuccess(t: String) {
+                    val responseJson = JSONObject(t)
+
+                    val apiStatus = responseJson.getBoolean("success")
+                    val apiMessage = responseJson.getString(ApiCode.MESSAGE)
+                    android.util.Log.d("MainActivity", "FriendData : $t")
+
+                    if (apiStatus) {
+                        val user = responseJson.getJSONObject(ApiCode.DATA).getJSONArray("posts").toList<ArticleEntity>(gson)
+                        dataArticle.postValue(user)
+                        apiResponse.postValue(ApiResponse().responseSuccess(apiMessage))
+                    } else {
+                        apiResponse.postValue(ApiResponse().responseWrong(apiMessage))
+                    }
+
+                }
+
+                override fun onError(e: Throwable) {
+                    apiResponse.postValue(ApiResponse().responseError(e))
+                }
+            })
+    }
+
+    fun listHiburan() = viewModelScope.launch(Dispatchers.IO) {
+        apiResponse.postValue(ApiResponse().responseLoading())
+        apiService.getHiburan()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
+            .subscribeWith(object : ApiObserver(true) {
+                override fun onSuccess(t: String) {
+                    val responseJson = JSONObject(t)
+
+                    val apiStatus = responseJson.getBoolean("success")
+                    val apiMessage = responseJson.getString(ApiCode.MESSAGE)
+                    android.util.Log.d("MainActivity", "FriendData : $t")
+
+                    if (apiStatus) {
+                        val user = responseJson.getJSONObject(ApiCode.DATA).getJSONArray("posts").toList<ArticleEntity>(gson)
+                        dataArticle.postValue(user)
+                        apiResponse.postValue(ApiResponse().responseSuccess(apiMessage))
+                    } else {
+                        apiResponse.postValue(ApiResponse().responseWrong(apiMessage))
+                    }
+
+                }
+
+                override fun onError(e: Throwable) {
+                    apiResponse.postValue(ApiResponse().responseError(e))
+                }
+            })
+    }
+
+    fun listGayaHidup() = viewModelScope.launch(Dispatchers.IO) {
+        apiResponse.postValue(ApiResponse().responseLoading())
+        apiService.getGayaHidup()
+            .observeOn(AndroidSchedulers.mainThread())
+            .subscribeOn(Schedulers.io())
+            .subscribeWith(object : ApiObserver(true) {
+                override fun onSuccess(t: String) {
+                    val responseJson = JSONObject(t)
+
+                    val apiStatus = responseJson.getBoolean("success")
+                    val apiMessage = responseJson.getString(ApiCode.MESSAGE)
+                    android.util.Log.d("MainActivity", "FriendData : $t")
+
+                    if (apiStatus) {
+                        val user = responseJson.getJSONObject(ApiCode.DATA).getJSONArray("posts").toList<ArticleEntity>(gson)
+                        dataArticle.postValue(user)
+                        apiResponse.postValue(ApiResponse().responseSuccess(apiMessage))
+                    } else {
+                        apiResponse.postValue(ApiResponse().responseWrong(apiMessage))
+                    }
+
+                }
+
+                override fun onError(e: Throwable) {
+                    apiResponse.postValue(ApiResponse().responseError(e))
+                }
+            })
+    }
+
 }

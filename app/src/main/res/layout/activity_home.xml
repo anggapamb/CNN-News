@@ -5,10 +5,14 @@
         <variable
             name="isLoading"
             type="Boolean" />
+        <variable
+            name="terbaru"
+            type="Boolean" />
         <import type="android.view.View" />
     </data>
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefress"
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -60,49 +64,57 @@
                 app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_terbaru"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/CustomChipStyle"
-                    android:checked="true"
+                    android:checked='@{terbaru}'
                     android:text="@string/terbaru"/>
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_nasional"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/CustomChipStyle"
                     android:text="@string/nasional"/>
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_internasional"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/CustomChipStyle"
                     android:text="@string/internasional"/>
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_ekonomi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/CustomChipStyle"
                     android:text="@string/ekonomi"/>
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_olahraga"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/CustomChipStyle"
                     android:text="@string/olahraga"/>
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_teknologi"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/CustomChipStyle"
                     android:text="@string/teknologi"/>
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chip_hiburan"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/CustomChipStyle"
                     android:text="@string/hiburan"/>
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/chio_gaya_hidup"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     style="@style/CustomChipStyle"
